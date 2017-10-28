@@ -22,3 +22,5 @@ model.fit(x_train,y_train,nb_epoch=100,batch_size=1)
 model.save_weights("net.model")
 r=pd.DataFrame(model.predict_classes(x_test),columns=["预测结果"])
 pd.concat([data_test.iloc[:,:5],r]).to_excel(outputfile)
+#- ETA: 0s - loss: 2.4687e-05 - acc: 1.0000
+# - 0s - loss: 0.1988 - acc: 0.8929
